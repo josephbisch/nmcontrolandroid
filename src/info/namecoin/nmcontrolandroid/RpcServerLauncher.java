@@ -8,8 +8,7 @@ import android.os.Bundle;
 public class RpcServerLauncher extends Activity {
 
 	  public static final ComponentName SL4A_SERVICE_COMPONENT_NAME =
-		      new ComponentName("com.android.python27","com.android.python27.RpcServerService");
-	  
+		      new ComponentName("info.namecoin.nmcontrolandroid","info.namecoin.nmcontrolandroid.RpcServerService");
 	  @Override
 	  protected void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);

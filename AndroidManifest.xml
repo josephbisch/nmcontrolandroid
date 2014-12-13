@@ -36,11 +36,15 @@
 	
     <service 	android:name="BackgroundScriptService">
     	<intent-filter>
-			<action android:name="com.android.python27.BackgroundScriptService" />
+			<action android:name="info.namecoin.nmcontrolandroid.BackgroundScriptService" />
 		</intent-filter>
 	</service>
 	
-	<service android:name="info.namecoin.nmcontrolandroid.RpcServerService" />
+	<service android:name="info.namecoin.nmcontrolandroid.RpcServerService">
+	    <intent-filter>
+	        <action android:name="com.android.python27.LAUNCH_RPC_SERVER" />
+	    </intent-filter>
+	</service>
 	        
     <activity 	android:configChanges="keyboardHidden|orientation"
       			android:name="com.googlecode.android_scripting.activity.FutureActivity" 
