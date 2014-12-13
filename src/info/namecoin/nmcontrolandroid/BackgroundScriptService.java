@@ -171,10 +171,10 @@ public class BackgroundScriptService extends Service {
 		Map<String, String> environmentVariables = null;	
 		environmentVariables = new HashMap<String, String>();
 		// this.getExternalFilesDir(null) next two lines
-		environmentVariables.put("PYTHONPATH", this.getFilesDir().getAbsolutePath()+ "/" + this.getPackageName() + "/extras/python" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7/lib-dynload" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7");		
-		environmentVariables.put("TEMP", this.getFilesDir().getAbsolutePath() + "/" + this.getPackageName() + "/extras/tmp");		
-		environmentVariables.put("PYTHONHOME", this.getFilesDir().getAbsolutePath() + "/python");		
-		environmentVariables.put("LD_LIBRARY_PATH", this.getFilesDir().getAbsolutePath() + "/python/lib" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7/lib-dynload");		
+		environmentVariables.put("PYTHONPATH", this.getFilesDir().getAbsolutePath() + "/extras/python" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7/lib-dynload" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7");
+		environmentVariables.put("TEMP", this.getFilesDir().getAbsolutePath() + "/extras/tmp");
+		environmentVariables.put("PYTHONHOME", this.getFilesDir().getAbsolutePath() + "/python");
+		environmentVariables.put("LD_LIBRARY_PATH", this.getFilesDir().getAbsolutePath() + "/python/lib" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7/lib-dynload");
 		
 		// launch script
 		mProxy = new AndroidProxy(this, null, true);

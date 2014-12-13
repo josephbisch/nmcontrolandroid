@@ -208,10 +208,10 @@ public class ScriptActivity extends Activity {
 					}
 					// python extras -> /sdcard/com.android.python27/extras/python
 					else if (sFileName.endsWith(GlobalConstants.PYTHON_EXTRAS_ZIP_NAME)) {
-						Utils.createDirectoryOnExternalStorage( this.getPackageName() + "/" + "extras");
-						Utils.createDirectoryOnExternalStorage( this.getPackageName() + "/" + "extras" + "/" + "tmp");
+						Utils.createDirectoryOnExternalStorage( "extras" );
+						Utils.createDirectoryOnExternalStorage( "extras/tmp" );
 						// this.getExternalFilesDir(null)
-						succeed &= Utils.unzip(content, this.getFilesDir().getAbsolutePath() + "/" + this.getPackageName() + "/extras/", true);
+						succeed &= Utils.unzip(content, this.getFilesDir().getAbsolutePath() + "/extras/", true);
 					}
 					
 				} catch (Exception e) {
